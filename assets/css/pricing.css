@@ -113,3 +113,7 @@
 .p-ic-feature .p-ic-est{color:rgba(255,255,255,.75)}
 .p-art-pkg{background:linear-gradient(135deg,#05070D 0%,#07204F 45%,var(--blue) 100%)}
 .p-in li b{color:var(--ink)}
+.p-divider{grid-column:1/-1;display:flex;align-items:center;gap:14px;margin-block:14px 4px}
+.p-divider::before,.p-divider::after{content:"";flex:1;height:0;border-top:2px solid var(--line-2)}
+.p-divider span{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+.p-divider[hidden]{display:none}

@@ -14,7 +14,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap">
 <link rel="stylesheet" href="/assets/css/ais.css?v=4">
-<link rel="stylesheet" href="/assets/css/pricing.css?v=6">
+<link rel="stylesheet" href="/assets/css/pricing.css?v=7">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -109,6 +109,8 @@
             <div class="p-foot"><div class="p-price"><small>Starting at</small><b>$12,000</b><span>110 transfers</span></div><button class="p-add" type="button" aria-pressed="false">Add to order <span aria-hidden="true">+</span></button></div>
           </div>
         </article>
+
+        <div class="p-divider" id="p-divider" role="separator" aria-label="Individual products"><span>Individual products</span></div>
 
         <article class="p-card" data-cat="leads" data-id="fresh" data-name="Fresh Exclusive Web Leads" data-price="2500" data-label="Starting at $2,500">
           <div class="p-art"><span class="p-badge">Real-time</span>
@@ -313,6 +315,9 @@ m.addEventListener('click',function(e){if(e.target.tagName==='A'){m.classList.re
     document.getElementById('p-heading').textContent=NAMES[filter];
     document.getElementById('p-num').textContent=shown+(shown===1?' product':' products');
     document.getElementById('p-none').hidden=shown>0;
+    var pk=cards.some(function(c){return !c.hidden&&c.getAttribute('data-cat').indexOf('packages')>-1;}),
+        ot=cards.some(function(c){return !c.hidden&&c.getAttribute('data-cat').indexOf('packages')<0;});
+    document.getElementById('p-divider').hidden=!(pk&&ot);
   }
   document.querySelectorAll('.p-tab').forEach(function(t){ t.addEventListener('click',function(){
     document.querySelectorAll('.p-tab').forEach(function(x){ x.setAttribute('aria-selected', x===t?'true':'false'); });
