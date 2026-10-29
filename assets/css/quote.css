@@ -8,7 +8,7 @@
 
 .q-hero{background:linear-gradient(180deg,#9CC7FF 0%,#CFE3FF 55%,var(--bg) 100%);padding-block:clamp(40px,6vw,72px) clamp(48px,7vw,88px)}
 .q-hero .wrap{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(24px,5vw,64px);align-items:center}
-.q-hero h1{font-size:clamp(30px,4.4vw,46px);color:#07204F;margin-bottom:24px;max-width:18ch}
+.q-hero h1{font-size:clamp(30px,4.4vw,46px);color:#07204F;margin-bottom:24px;max-width:22ch}
 .q-art{color:var(--blue-ink);min-width:0}
 .q-art svg{width:100%;height:auto;display:block}
 @media (max-width:900px){.q-hero .wrap{grid-template-columns:1fr}.q-art{display:none}}
