@@ -2,23 +2,85 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "redirects": [
-    { "source": "/services", "destination": "/", "permanent": true },
-    { "source": "/pay-per-lead", "destination": "/#leads", "permanent": true },
-    { "source": "/local-seo", "destination": "/", "permanent": true },
-    { "source": "/crm", "destination": "/", "permanent": true },
-    { "source": "/growth", "destination": "/", "permanent": true },
-    { "source": "/about", "destination": "/#values", "permanent": true }
+    {
+      "source": "/quote",
+      "has": [
+        {
+          "type": "host",
+          "value": "inquiry.aperiansolutions.com"
+        }
+      ],
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/services",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/pay-per-lead",
+      "destination": "/#leads",
+      "permanent": true
+    },
+    {
+      "source": "/local-seo",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/crm",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/growth",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/about",
+      "destination": "/#values",
+      "permanent": true
+    }
   ],
   "headers": [
     {
       "source": "/(.*)",
       "headers": [
-        { "key": "Strict-Transport-Security", "value": "max-age=63072000; includeSubDomains; preload" },
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
-        { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=()" }
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=63072000; includeSubDomains; preload"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=()"
+        }
       ]
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "inquiry.aperiansolutions.com"
+        }
+      ],
+      "destination": "/quote"
     }
   ]
 }
