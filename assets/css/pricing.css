@@ -111,3 +111,5 @@
 .p-ic-price span{white-space:nowrap}
 .p-ic-price b{font-size:clamp(36px,3.6vw,46px)}
 .p-ic-feature .p-ic-est{color:rgba(255,255,255,.75)}
+.p-art-pkg{background:linear-gradient(135deg,#05070D 0%,#07204F 45%,var(--blue) 100%)}
+.p-in li b{color:var(--ink)}
