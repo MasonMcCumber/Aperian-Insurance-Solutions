@@ -110,3 +110,4 @@
 .p-ic-est{font-size:13px;color:var(--muted);margin-top:-10px}
 .p-ic-price span{white-space:nowrap}
 .p-ic-price b{font-size:clamp(36px,3.6vw,46px)}
+.p-ic-feature .p-ic-est{color:rgba(255,255,255,.75)}
