@@ -243,13 +243,16 @@
     return true;
   }
 
+  // After the ZIP, skip the coverage question when an ad link already chose it (?type=auto).
+  function afterZip(){ if(!validate(1)) return; if(pre&&type()){ layoutDetails(); show(3); } else show(2); }
   form.addEventListener('click',function(e){
+    // Clicking a coverage option always advances, even if it was already selected.
+    if(e.target.name==='insurance_type'&&cur===2){ pre=''; if(validate(2)) show(3); return; }
     var b=e.target.closest('button'); if(!b) return;
-    if(b.hasAttribute('data-next')){ if(validate(cur)) show(cur+1); }
-    if(b.hasAttribute('data-back')){ show(cur-1); }
+    if(b.hasAttribute('data-next')){ if(cur===1) afterZip(); else if(validate(cur)) show(cur+1); }
+    if(b.hasAttribute('data-back')){ if(cur===3) pre=''; show(cur-1); }
   });
-  form.addEventListener('change',function(e){ if(e.target.name==='insurance_type'&&cur===2&&validate(2)) show(3); });
-  document.getElementById('q-zip').addEventListener('keydown',function(e){ if(e.key==='Enter'){ e.preventDefault(); if(validate(1)) show(2); } });
+  document.getElementById('q-zip').addEventListener('keydown',function(e){ if(e.key==='Enter'){ e.preventDefault(); afterZip(); } });
   document.querySelectorAll('[data-pick]').forEach(function(a){ a.addEventListener('click',function(){
     var r=form.querySelector('input[name="insurance_type"][value="'+a.getAttribute('data-pick')+'"]'); if(r) r.checked=true;
     if(cur>=2&&cur<5){ layoutDetails(); show(validate(1)?3:1); }
