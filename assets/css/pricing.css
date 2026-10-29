@@ -108,3 +108,5 @@
 .p-ic dd{margin:0;font-size:15px;font-weight:600}
 .p-ic-note{font-size:13px;color:var(--muted);margin-top:6px}
 .p-ic-est{font-size:13px;color:var(--muted);margin-top:-10px}
+.p-ic-price span{white-space:nowrap}
+.p-ic-price b{font-size:clamp(36px,3.6vw,46px)}
