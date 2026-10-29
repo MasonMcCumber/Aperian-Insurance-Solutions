@@ -13,7 +13,7 @@ Visitor fills the form
 ```
 
 If `GHL_QUOTE_WEBHOOK_URL` is not set, or GoHighLevel rejects the request, the form
-shows the visitor "please call or text (979) 353-2533" instead of a false success.
+shows the visitor "please call or text (979) 402-1300" instead of a false success.
 
 ## 1. Custom fields to create in GoHighLevel
 

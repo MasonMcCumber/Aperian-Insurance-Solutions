@@ -81,3 +81,29 @@
 .p-table th{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);background:var(--soft)}
 .p-table tr:last-child td{border-bottom:0}
 .p-table td:last-child{font-weight:600;color:var(--ink)}
+
+/* lead-type comparison infographic */
+.p-compare{margin-top:clamp(40px,6vw,64px);display:grid;gap:8px}
+.p-crumb2{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--blue)}
+.p-compare h2{font-size:clamp(24px,3.2vw,32px)}
+.p-compare > p{color:var(--muted);margin-bottom:12px}
+.p-info{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;align-items:stretch}
+@media (max-width:860px){.p-info{grid-template-columns:1fr}}
+.p-ic{position:relative;background:var(--bg);border:1px solid var(--line);border-radius:var(--r-lg);padding:24px 22px;display:grid;gap:18px;align-content:start;min-width:0}
+.p-ic-feature{background:linear-gradient(160deg,#07204F 0%,var(--blue) 100%);border-color:transparent;color:#fff;box-shadow:var(--shadow)}
+.p-ic-flag{position:absolute;top:-11px;left:22px;background:#fff;color:#07204F;border:1px solid var(--line);font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:4px 10px;border-radius:999px}
+.p-ic-top{display:flex;align-items:center;gap:12px}
+.p-ic-icon{width:48px;height:48px;border-radius:14px;background:var(--blue-soft);color:var(--blue);display:grid;place-items:center;flex:none}
+.p-ic-feature .p-ic-icon{background:rgba(255,255,255,.15);color:#fff}
+.p-ic h3{font-size:19px}
+.p-ic-price{display:flex;align-items:baseline;gap:8px;padding-block:6px 14px;border-bottom:1px solid var(--line)}
+.p-ic-feature .p-ic-price{border-color:rgba(255,255,255,.2)}
+.p-ic-price b{font-family:var(--f-display);font-size:48px;line-height:1;letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.p-ic-price span{font-size:14px;color:var(--muted)}
+.p-ic-feature .p-ic-price span{color:rgba(255,255,255,.75)}
+.p-ic dl{margin:0;display:grid;gap:14px}
+.p-ic dl div{display:grid;gap:2px}
+.p-ic dt{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.p-ic-feature dt{color:rgba(255,255,255,.7)}
+.p-ic dd{margin:0;font-size:15px;font-weight:600}
+.p-ic-note{font-size:13px;color:var(--muted);margin-top:6px}
