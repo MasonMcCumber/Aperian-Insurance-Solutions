@@ -3,17 +3,6 @@
   "trailingSlash": false,
   "redirects": [
     {
-      "source": "/quote",
-      "has": [
-        {
-          "type": "host",
-          "value": "inquiry.aperiansolutions.com"
-        }
-      ],
-      "destination": "/",
-      "permanent": true
-    },
-    {
       "source": "/services",
       "destination": "/",
       "permanent": true
@@ -69,18 +58,6 @@
           "value": "camera=(), microphone=(), geolocation=()"
         }
       ]
-    }
-  ],
-  "rewrites": [
-    {
-      "source": "/",
-      "has": [
-        {
-          "type": "host",
-          "value": "inquiry.aperiansolutions.com"
-        }
-      ],
-      "destination": "/quote"
     }
   ]
 }

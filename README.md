@@ -14,7 +14,7 @@ and publishes to aperiansolutions.com automatically. Other branches get preview 
 
 ## Consumer quote page
 
-`quote.html` is served at **inquiry.aperiansolutions.com** (host rewrite in
-`vercel.json`) and posts to `api/quote.js`, which forwards to GoHighLevel via the
+`quote.html` is served at **inquiry.aperiansolutions.com** (host check in
+`middleware.js`) and posts to `api/quote.js`, which forwards to GoHighLevel via the
 `GHL_QUOTE_WEBHOOK_URL` environment variable. Setup steps:
 `docs/gohighlevel-quote-routing.md`.
