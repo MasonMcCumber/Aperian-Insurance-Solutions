@@ -97,20 +97,13 @@ section{padding-block:clamp(60px,8vw,104px)}
 @media (max-width:640px){.types{grid-template-columns:1fr 1fr}}
 @media (max-width:420px){.types{grid-template-columns:1fr}}
 
-/* values + founders */
+/* values */
 .values{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
 .value{display:grid;gap:10px;align-content:start;padding:26px 22px;border-top:3px solid var(--blue);background:var(--bg)}
 .value h3{font-size:19px}
 .value p{color:var(--muted);font-size:15px}
 @media (max-width:960px){.values{grid-template-columns:1fr 1fr}}
 @media (max-width:520px){.values{grid-template-columns:1fr}}
-.founders{margin-top:clamp(40px,6vw,64px);display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center;background:var(--soft);border-radius:var(--r-lg);padding:28px}
-.faces{display:flex}
-.faces img{width:64px;height:64px;border-radius:50%;object-fit:cover;border:3px solid var(--soft);margin-left:-14px;background:var(--line)}
-.faces img:first-child{margin-left:0}
-.founders p{color:var(--ink-2);font-size:16px;max-width:70ch}
-.founders b{color:var(--ink)}
-@media (max-width:700px){.founders{grid-template-columns:1fr}}
 
 /* cta band */
 .cta{background:var(--night);color:#fff;text-align:center;position:relative;overflow:hidden}
