@@ -9,4 +9,5 @@ Static marketing site for aperiansolutions.com, hosted on Vercel.
   Without it, the form tells visitors to call or text instead.
 - `vercel.json`: clean URLs, security headers, redirects from the old marketing pages
 
-Deploy: `vercel deploy --prod`
+Deploy: push to `main` on GitHub (MasonMcCumber/Aperian-Insurance-Solutions). Vercel builds
+and publishes to aperiansolutions.com automatically. Other branches get preview URLs.
